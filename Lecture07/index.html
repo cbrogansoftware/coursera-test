@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>CSB HTML5 Custom Atts</title>
+</head>
+<body>
+
+<h1>CSB HTML5 Custom Atts</h1>
+
+<div id="target" ng-app="myTestApp">
+  <section>Section 1
+    <article>Article 1</article>
+  </section>
+
+  <script>
+    var elem2 = document.querySelector("[ng-app]");
+    console.log(elem2);
+    console.log(elem2.getAttribute('ng-app'));
+
+    // var elem = document.getElementById('target')
+    // console.log(elem)
+    // console.log(elem.getAttribute('ng-app'));
+  </script>
+
+</div>
+
+</body>
+</html>
