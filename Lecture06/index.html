@@ -7,14 +7,18 @@
     <style>body { font-size: 1.3em; }</style>
     <title>Name Calculator</title>
 </head>
-<body>
+<body ng-app="NameCalculator">
 <h1>CSB Name Calculator</h1>
-<div>
+<div ng-controller="NameCalculatorController">
     <div>
         Your Name:
-        <input type="text">
+        <input type="text"
+               ng-model="name"
+               ng-keyup="displayNumeric();"
+        >
     </div>
-    <div>Total Numeric value of person name is: </div>
+    <div>Total Numeric value of person name is: {{totalValue}}</div>
+    {{name}}
 </div>
 
 </body>
