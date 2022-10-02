@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='MsgApp'>
+<head >
+    <meta charset="UTF-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>CSB Filters</title>
+</head>
+<body>
+<h1>CSB Filters</h1>
+
+<div ng-controller='MsgController'>
+    {{name}} has a message for you..
+    {{sayMessage()}}
+    <div>
+        <button ng-click="feedCsb()">Feed CSB</button><br>
+        Cost: {{cookieCost | currency : "$" : 4}}<br>
+        State: {{stateOfBeing}}<br>
+    </div>
+</div>
+
+</body>
+</html>
