@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app='BindingApp'>
+<head >
+    <meta charset="UTF-8">
+    <script src="angular.min.js"></script>
+    <script src="app.js"></script>
+    <title>2w, 1w, 1t bindings</title>
+</head>
+<body>
+<h1>CSB 2w, 1w, 1t bindings</h1>
+
+<div ng-controller='BindingController'>
+
+    <button ng-click="showNumberOfWatchers()">Log # Watchers</button><br>
+    <button ng-click="setFullName()">Set Full Name</button><br>
+
+    Full name: {{ :: fullName }}<br> <!-- 1-Time so doesn't get updated again because watcher is removed after first. -->
+    First name: {{ firstName }}<br> <!-- 1-Way.  Changes if controller changes it or something else does.-->
+
+
+    <button ng-click="logFirstName()">Log First Name</button><br>
+    <button ng-click="logFullName()">Log Full Name</button><br>
+
+    <div>
+        <input type="text" ng-model="firstName"> <!-- 2-Way. Has a watcher.  See on screen change. When this changes, on screen changes.-->
+    </div>
+
+</div>
+
+
+</body>
+</html>
